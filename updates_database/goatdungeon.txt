@@ -1,2 +1,7 @@
 2.0
 true
+
+First line: newest version
+Second line: 1 = force update, anyting else (not 1) = don't force update
+
+7th line says: "7th line says: '7th line says: GUYS THIS IS A PARADOX THE WORLD IS ABOUT TO EXPLODE HELP

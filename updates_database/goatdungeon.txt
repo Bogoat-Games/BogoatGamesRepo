@@ -1,5 +1,5 @@
 2.0
-1
+
 
 First line: newest version
 Second line: 1 = force update, anyting else (not 1) = don't force update

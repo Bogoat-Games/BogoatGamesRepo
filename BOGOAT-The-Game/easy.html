@@ -1,21 +1,16 @@
-<title>BOGOAT - The Game</title>
+<title>BOGOAT: The Game - Easy</title>
 <head>
 <script src='https://www.google.com/recaptcha/api.js'></script>
+<script src='script-v1.js'></script>
 <script>
-function CheckWinState() {
-	try {
-		verified = document.getElementById("g-recaptcha").value;
-		alert (verified);
-	} catch (err) {
-		console.log ("Bloody Hell.");
-		console.log (err);
-	}
+function youwon() {
+    alert ("You Won!");
 }
 </script>
+<script>
+ab68656c6c6f = new ab626f676f61742d7468652d67616d65;
+document.write("<center>");
+document.write("<div class='g-recaptcha' data-sitekey="ab68656c6c6f.ab676574636170746368616b6579(1)"></div>");
+document.write("/<center>");
+</script>
 </head>
-<body><center>
-<form>
-<div class="g-recaptcha" data-sitekey="6LcnuXQUAAAAAAT0knncGKWZ3RKIDsUUJkU2DfB1"></div>
-<input type="button" value="ok" onclick="CheckWinState()">
-</form>
-</center></body>

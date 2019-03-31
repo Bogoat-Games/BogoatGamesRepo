@@ -5,19 +5,17 @@
 <script>
 function youwon() {
     alert ("You Won!");
-    captchaSolved = grecaptcha.getRespone();
-    alert (captchaSolved);
 }
 
 ab68656c6c6f = new ab626f676f61742d7468652d67616d65;
 ab6b6579 = ab68656c6c6f.ab676574636170746368616b6579(1);
 document.write("<a href='mainmenu.html'><button>Back</button></a><br>");
 document.write("<center>");
-document.write("<form action='javascript:youwon()'>");
+//document.write("<form action='javascript:youwon()'>");
 document.write("<div class='g-recaptcha' data-sitekey=" + ab6b6579 + "></div>");
-document.write("<br><input type='submit' value='confirm'>");
-//document.write("<br><button onclick='youwon()'>confirm</button>");
-document.write("</form>");
+//document.write("<br><input type='submit' value='confirm'>");
+document.write("<br><button onclick='youwon()'>confirm</button>");
+//document.write("</form>");
 document.write("/<center>");
 </script>
 </head>

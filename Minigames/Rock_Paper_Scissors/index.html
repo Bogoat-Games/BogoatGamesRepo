@@ -1,2 +1,129 @@
-<title>Bogoat Games</title>
-<center><h1>Coming Soon</h1></center>
+<html>
+<head>
+<title>roke_peper_scissors</title>
+</head>
+<body>
+<center>
+<table>
+<table border = "1" align = "left">
+<tr>
+	<td><h1>win</h1></td>
+	<td><h1>draw</h1></td>
+	<td><h1>lose</h1></td>
+</tr>
+<tr>
+	<td><b id="win"></b></td>
+	<td><b id="draw"></b></td>
+	<td><b id="lose"></b></td>
+</tr>
+</table>
+<table align = "tight">
+<th><h1>peper roke scissors</h1></th>
+<tr>
+<td><input type="button" id="" value="peper"onclick="peper()"></td>
+</tr>
+<tr>
+<td><input type="button" id="" value="rock"onclick="rock()"></td>
+</tr>
+<tr>
+<td><input type="button" id="" value="scissors"onclick="scissors()"></td>
+</tr>
+<tr>
+<td><td><input type="button" id="" value="refresh"onclick="refresh()"></td></td>
+</tr>
+<tr>
+<p id="demo"></p>
+<td><td><h1><b id="paka"></b></h1></td></td>
+</tr>
+</table>
+</table>
+<script>
+var a = Math.floor((Math.random() * 10) + 1);
+var r = 0;
+var win = 0
+var lose = 0
+var draw = 0
+
+function refresh() {
+a = Math.floor((Math.random() * 10) + 1);
+r = 0;
+document.getElementById("draw").innerHTML = (draw);
+document.getElementById("win").innerHTML = (win);
+document.getElementById("lose").innerHTML = (lose);
+}
+
+function peper() {
+if (r == 0) {
+r = 1
+if (a == 1 || a == 4 || a == 7) {
+document.getElementById("paka").innerHTML = ("<span style=\"color:black;\">" + "peper v peper it draw" + "<\/sepan>");
+draw = draw + 1;
+document.getElementById("draw").innerHTML = (draw);
+}
+if (a == 2 || a == 5 || a == 8) {
+document.getElementById("paka").innerHTML = ("<span style=\"color:green;\">" + "peper v rock you won" + "<\/sepan>");
+win = win + 1;
+document.getElementById("win").innerHTML = (win);
+}
+if (a == 3 || a == 6 || a == 9 || a == 10) {
+document.getElementById("paka").innerHTML = ("<span style=\"color:red;\">" + "peper v scissors you lose" + "<\/sepan>");
+lose = lose + 1;
+document.getElementById("lose").innerHTML = (lose);
+}
+}
+else {
+document.getElementById("paka").innerHTML = ("<span style=\"color:red;\">" + "refresh the page" + "<\/sepan>");
+}
+}
+
+function rock() {
+if (r == 0) {
+r = 1;
+if (a == 1 || a == 4 || a == 7) {
+document.getElementById("paka").innerHTML = ("<span style=\"color:red;\">" + "rock v peper you lose" + "<\/sepan>");
+lose = lose + 1;
+document.getElementById("lose").innerHTML = (lose);
+}
+if (a == 2 || a == 5 || a == 8) {
+document.getElementById("paka").innerHTML = ("<span style=\"color:black;\">" + "rock v rock it draw" + "<\/sepan>");
+draw = draw + 1;
+document.getElementById("draw").innerHTML = (draw);
+}
+if (a == 3 || a == 6 || a == 9 || a == 10) {
+document.getElementById("paka").innerHTML = ("<span style=\"color:green;\">" + "rock v scissors you won" + "<\/sepan>");
+win = win + 1;
+document.getElementById("win").innerHTML = (win);
+}
+}
+else {
+document.getElementById("paka").innerHTML = ("<span style=\"color:red;\">" + "refresh the page" + "<\/sepan>");
+}
+}
+
+function scissors() {
+if (r == 0) {
+r = 1;
+if (a == 1 || a == 4 || a == 7) {
+document.getElementById("paka").innerHTML = ("<span style=\"color:green;\">" + "scissors v peper you won" + "<\/sepan>");
+win = win + 1;
+document.getElementById("win").innerHTML = (win);
+}
+if (a == 2 || a == 5 || a == 8) {
+document.getElementById("paka").innerHTML = ("<span style=\"color:red;\">" + "scissors v rock you lose" + "<\/sepan>");
+lose = lose + 1;
+document.getElementById("lose").innerHTML = (lose);
+}
+if (a == 3 || a == 6 || a == 9 || a == 10) {
+document.getElementById("paka").innerHTML = ("<span style=\"color:black;\">" + "scissors v sezer it draw" + "<\/sepan>");
+draw = draw + 1;
+document.getElementById("draw").innerHTML = (draw);
+}
+}
+else {
+document.getElementById("paka").innerHTML = ("<span style=\"color:red;\">" + "refresh the page" + "<\/sepan>");
+}
+}
+</script>
+</center>
+</body>
+</html>

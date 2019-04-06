@@ -1,2 +1,1136 @@
-<title>Bogoat Games</title>
-<center><h1>Coming Soon</h1></center>
+<html>
+<body>
+<title>tic tac toe</title>
+</body>
+<center>
+<u><h1><b>tic tac toe</b></h1></u>
+<h1><b id="paka"></b></h1>
+<canvas id="Canvas" width="450" height="450" style="border:1px solid #000000;"></canvas>
+</center>
+<table align = "center">
+<tr>
+<td><button onclick="x1()">.</button></td>
+<td><button onclick="x2()">.</button></td>
+<td><button onclick="x3()">.</button></td>
+</tr>
+
+<tr>
+<td><button onclick="x4()">.</button></td>
+<td><button onclick="x5()">.</button></td>
+<td><button onclick="x6()">.</button></td>
+</tr>
+
+<tr>
+<td><button onclick="x7()">.</button></td>
+<td><button onclick="x8()">.</button></td>
+<td><button onclick="x9()">.</button></td>
+</tr>
+</table>
+<script>
+var d = document.getElementById("Canvas");
+var atx = d.getContext("2d");
+var a = 0;
+var b = 0;
+var c = 0;
+var d = 0;
+var e = 0;
+var f = 0;
+var g = 0
+var h = 0;
+var i = 0;
+var tern = 0;
+
+document.getElementById("paka").innerHTML = ("x start.");
+
+atx.lineWidth=2.5555;
+
+atx.moveTo(0,150);
+atx.lineTo(450,150);
+
+atx.moveTo(150,0);
+atx.lineTo(150,450);
+
+atx.moveTo(150,0);
+atx.lineTo(150,450);
+
+atx.moveTo(0,300);
+atx.lineTo(450,300);
+
+
+atx.moveTo(300,0);
+atx.lineTo(300,450);
+atx.stroke();
+
+function x1() {
+if (tern == 0) {
+if (e == 0){
+atx.moveTo(50,50);
+atx.lineTo(100,100);
+
+atx.moveTo(100,50);
+atx.lineTo(50,100);
+atx.stroke();
+e = 1;
+tern = 1;
+}
+else {
+document.getElementById("paka").innerHTML = ("you can't do that");
+}
+}
+else {
+if (e == 0) {
+atx.beginPath();
+atx.arc(75,75,25, 0, 2 * Math.PI, false);
+atx.stroke();
+atx.closePath();
+e = -1;
+tern = 0;
+}
+else {
+document.getElementById("paka").innerHTML = ("you can't do that");
+}
+}
+if (e == h && e == g && h == g && h == e && g == h && g == e && e != 0 && g != 0 && h != 0) {
+atx.moveTo(75,0);
+atx.lineTo(75,450);
+atx.stroke();
+if (e == 1) {
+document.getElementById("paka").innerHTML = ("x won.");
+}
+else if (e == -1) {
+document.getElementById("paka").innerHTML = ("o won.");
+}
+}
+if (e == b && e == i && b == e && b == i && i == b && i == e && e != 0 && b != 0 && i != 0) {
+atx.moveTo(0,75);
+atx.lineTo(450,75);
+atx.stroke();
+if (e == 1) {
+document.getElementById("paka").innerHTML = ("x won.");
+}
+else if (e == -1) {
+document.getElementById("paka").innerHTML = ("o won.");
+}
+}
+if (e == a && e == f && a == e && a == f && f == a && f == e && e != 0 && a != 0 && f != 0) {
+atx.moveTo(0,0);
+atx.lineTo(450,450);
+atx.stroke();
+if (e == 1) {
+document.getElementById("paka").innerHTML = ("x won.");
+}
+else if (e == -1) {
+document.getElementById("paka").innerHTML = ("o won.");
+}
+}
+if (g == c && g == f && c == g && c == f && f == g && f == c && g != 0 && c != 0 && f != 0) {
+atx.moveTo(0,375);
+atx.lineTo(450,375);
+atx.stroke();
+if (g == 1) {
+document.getElementById("paka").innerHTML = ("x won.");
+}
+else if (g == -1) {
+document.getElementById("paka").innerHTML = ("o won.");
+}
+}
+if (i == d && i == f && d == i && d == f && f == i && f == d && i != 0 && d != 0 && f != 0) {
+atx.moveTo(375,0);
+atx.lineTo(375,450);
+atx.stroke();
+if (i == 1) {
+document.getElementById("paka").innerHTML = ("x won.");
+}
+else if (i == -1) {
+document.getElementById("paka").innerHTML = ("o won.");
+}
+}
+if (a == h && a == d && h == a && h == d && f == a && d == h && a != 0 && d != 0 && h != 0) {
+atx.moveTo(0,225);
+atx.lineTo(450,225);
+atx.stroke();
+if (a == 1) {
+document.getElementById("paka").innerHTML = ("x won.");
+}
+else if (a == -1) {
+document.getElementById("paka").innerHTML = ("o won.");
+}
+}
+if (a == g && a == i && g == a && g == i && i == a && i == g && a != 0 && g != 0 && i != 0) {
+atx.moveTo(0,450);
+atx.lineTo(450,0);
+atx.stroke();
+if (a == 1) {
+document.getElementById("paka").innerHTML = ("x won.");
+}
+else if (a == -1) {
+document.getElementById("paka").innerHTML = ("o won.");
+}
+}
+if (a == c && a == b && c == a && c == b && b == a && b == c && a != 0 && c != 0 && b != 0) {
+atx.moveTo(225,450);
+atx.lineTo(225,0);
+atx.stroke();
+if (a == 1) {
+document.getElementById("paka").innerHTML = ("x won.");
+}
+else if (a == -1) {
+document.getElementById("paka").innerHTML = ("o won.");
+}
+}
+}
+
+function x2() {
+if (tern == 0) {
+if (b == 0) {
+atx.moveTo(200,50);
+atx.lineTo(250,100);
+
+atx.moveTo(250,50);
+atx.lineTo(200,100);
+atx.stroke();
+b = 1;
+tern = 1;
+}
+else {
+document.getElementById("paka").innerHTML = ("you can't do that");
+}
+}
+else {
+if (b == 0){
+atx.beginPath();
+atx.arc(225,75,25, 0, 2 * Math.PI, false);
+atx.stroke();
+atx.closePath();
+b = -1;
+tern = 0;
+}
+else {
+document.getElementById("paka").innerHTML = ("you can't do that");
+}
+}
+if (e == h && e == g && h == g && h == e && g == h && g == e && e != 0 && g != 0 && h != 0) {
+atx.moveTo(75,0);
+atx.lineTo(75,450);
+atx.stroke();
+if (e == 1) {
+document.getElementById("paka").innerHTML = ("x won.");
+}
+else if (e == -1) {
+document.getElementById("paka").innerHTML = ("o won.");
+}
+}
+if (e == b && e == i && b == e && b == i && i == b && i == e && e != 0 && b != 0 && i != 0) {
+atx.moveTo(0,75);
+atx.lineTo(450,75);
+atx.stroke();
+if (e == 1) {
+document.getElementById("paka").innerHTML = ("x won.");
+}
+else if (e == -1) {
+document.getElementById("paka").innerHTML = ("o won.");
+}
+}
+if (e == a && e == f && a == e && a == f && f == a && f == e && e != 0 && a != 0 && f != 0) {
+atx.moveTo(0,0);
+atx.lineTo(450,450);
+atx.stroke();
+if (e == 1) {
+document.getElementById("paka").innerHTML = ("x won.");
+}
+else if (e == -1) {
+document.getElementById("paka").innerHTML = ("o won.");
+}
+}
+if (g == c && g == f && c == g && c == f && f == g && f == c && g != 0 && c != 0 && f != 0) {
+atx.moveTo(0,375);
+atx.lineTo(450,375);
+atx.stroke();
+if (g == 1) {
+document.getElementById("paka").innerHTML = ("x won.");
+}
+else if (g == -1) {
+document.getElementById("paka").innerHTML = ("o won.");
+}
+}
+if (i == d && i == f && d == i && d == f && f == i && f == d && i != 0 && d != 0 && f != 0) {
+atx.moveTo(375,0);
+atx.lineTo(375,450);
+atx.stroke();
+if (i == 1) {
+document.getElementById("paka").innerHTML = ("x won.");
+}
+else if (i == -1) {
+document.getElementById("paka").innerHTML = ("o won.");
+}
+}
+if (a == h && a == d && h == a && h == d && f == a && d == h && a != 0 && d != 0 && h != 0) {
+atx.moveTo(0,225);
+atx.lineTo(450,225);
+atx.stroke();
+if (a == 1) {
+document.getElementById("paka").innerHTML = ("x won.");
+}
+else if (a == -1) {
+document.getElementById("paka").innerHTML = ("o won.");
+}
+}
+if (a == g && a == i && g == a && g == i && i == a && i == g && a != 0 && g != 0 && i != 0) {
+atx.moveTo(0,450);
+atx.lineTo(450,0);
+atx.stroke();
+if (a == 1) {
+document.getElementById("paka").innerHTML = ("x won.");
+}
+else if (a == -1) {
+document.getElementById("paka").innerHTML = ("o won.");
+}
+}
+if (a == c && a == b && c == a && c == b && b == a && b == c && a != 0 && c != 0 && b != 0) {
+atx.moveTo(225,450);
+atx.lineTo(225,0);
+atx.stroke();
+if (a == 1) {
+document.getElementById("paka").innerHTML = ("x won.");
+}
+else if (a == -1) {
+document.getElementById("paka").innerHTML = ("o won.");
+}
+}
+}
+
+function x3() {
+if (tern == 0) {
+if (i == 0) {
+atx.moveTo(400,100);
+atx.lineTo(350,50);
+
+atx.moveTo(400,50);
+atx.lineTo(350,100);
+atx.stroke();
+i = 1;
+tern = 1;
+}
+else {
+document.getElementById("paka").innerHTML = ("you can't do that");
+}
+}
+else {
+if (i == 0) {
+atx.beginPath();
+atx.arc(375,75,25, 0, 2 * Math.PI, false);
+atx.stroke();
+atx.closePath();
+i = -1;
+tern = 0;
+}
+else {
+document.getElementById("paka").innerHTML = ("you can't do that");
+}
+}
+if (e == h && e == g && h == g && h == e && g == h && g == e && e != 0 && g != 0 && h != 0) {
+atx.moveTo(75,0);
+atx.lineTo(75,450);
+atx.stroke();
+if (e == 1) {
+document.getElementById("paka").innerHTML = ("x won.");
+}
+else if (e == -1) {
+document.getElementById("paka").innerHTML = ("o won.");
+}
+}
+if (e == b && e == i && b == e && b == i && i == b && i == e && e != 0 && b != 0 && i != 0) {
+atx.moveTo(0,75);
+atx.lineTo(450,75);
+atx.stroke();
+if (e == 1) {
+document.getElementById("paka").innerHTML = ("x won.");
+}
+else if (e == -1) {
+document.getElementById("paka").innerHTML = ("o won.");
+}
+}
+if (e == a && e == f && a == e && a == f && f == a && f == e && e != 0 && a != 0 && f != 0) {
+atx.moveTo(0,0);
+atx.lineTo(450,450);
+atx.stroke();
+if (e == 1) {
+document.getElementById("paka").innerHTML = ("x won.");
+}
+else if (e == -1) {
+document.getElementById("paka").innerHTML = ("o won.");
+}
+}
+if (g == c && g == f && c == g && c == f && f == g && f == c && g != 0 && c != 0 && f != 0) {
+atx.moveTo(0,375);
+atx.lineTo(450,375);
+atx.stroke();
+if (g == 1) {
+document.getElementById("paka").innerHTML = ("x won.");
+}
+else if (g == -1) {
+document.getElementById("paka").innerHTML = ("o won.");
+}
+}
+if (i == d && i == f && d == i && d == f && f == i && f == d && i != 0 && d != 0 && f != 0) {
+atx.moveTo(375,0);
+atx.lineTo(375,450);
+atx.stroke();
+if (i == 1) {
+document.getElementById("paka").innerHTML = ("x won.");
+}
+else if (i == -1) {
+document.getElementById("paka").innerHTML = ("o won.");
+}
+}
+if (a == h && a == d && h == a && h == d && f == a && d == h && a != 0 && d != 0 && h != 0) {
+atx.moveTo(0,225);
+atx.lineTo(450,225);
+atx.stroke();
+if (a == 1) {
+document.getElementById("paka").innerHTML = ("x won.");
+}
+else if (a == -1) {
+document.getElementById("paka").innerHTML = ("o won.");
+}
+}
+if (a == g && a == i && g == a && g == i && i == a && i == g && a != 0 && g != 0 && i != 0) {
+atx.moveTo(0,450);
+atx.lineTo(450,0);
+atx.stroke();
+if (a == 1) {
+document.getElementById("paka").innerHTML = ("x won.");
+}
+else if (a == -1) {
+document.getElementById("paka").innerHTML = ("o won.");
+}
+}
+if (a == c && a == b && c == a && c == b && b == a && b == c && a != 0 && c != 0 && b != 0) {
+atx.moveTo(225,450);
+atx.lineTo(225,0);
+atx.stroke();
+if (a == 1) {
+document.getElementById("paka").innerHTML = ("x won.");
+}
+else if (a == -1) {
+document.getElementById("paka").innerHTML = ("o won.");
+}
+}
+}
+
+function x4() {
+if (tern == 0) {
+if (h == 0) {
+atx.moveTo(50,250);
+atx.lineTo(100,200);
+
+atx.moveTo(100,250);
+atx.lineTo(50,200);
+atx.stroke();
+h = 1;
+tern = 1;
+}
+else {
+document.getElementById("paka").innerHTML = ("you can't do that");
+}
+}
+else {
+if (h == 0) {
+atx.beginPath();
+atx.arc(75,225,25, 0, 2 * Math.PI, false);
+atx.stroke();
+atx.closePath();
+h = -1;
+tern = 0;
+}
+else {
+document.getElementById("paka").innerHTML = ("you can't do that");
+}
+}
+if (e == h && e == g && h == g && h == e && g == h && g == e && e != 0 && g != 0 && h != 0) {
+atx.moveTo(75,0);
+atx.lineTo(75,450);
+atx.stroke();
+if (e == 1) {
+document.getElementById("paka").innerHTML = ("x won.");
+}
+else if (e == -1) {
+document.getElementById("paka").innerHTML = ("o won.");
+}
+}
+if (e == b && e == i && b == e && b == i && i == b && i == e && e != 0 && b != 0 && i != 0) {
+atx.moveTo(0,75);
+atx.lineTo(450,75);
+atx.stroke();
+if (e == 1) {
+document.getElementById("paka").innerHTML = ("x won.");
+}
+else if (e == -1) {
+document.getElementById("paka").innerHTML = ("o won.");
+}
+}
+if (e == a && e == f && a == e && a == f && f == a && f == e && e != 0 && a != 0 && f != 0) {
+atx.moveTo(0,0);
+atx.lineTo(450,450);
+atx.stroke();
+if (e == 1) {
+document.getElementById("paka").innerHTML = ("x won.");
+}
+else if (e == -1) {
+document.getElementById("paka").innerHTML = ("o won.");
+}
+}
+if (g == c && g == f && c == g && c == f && f == g && f == c && g != 0 && c != 0 && f != 0) {
+atx.moveTo(0,375);
+atx.lineTo(450,375);
+atx.stroke();
+if (g == 1) {
+document.getElementById("paka").innerHTML = ("x won.");
+}
+else if (g == -1) {
+document.getElementById("paka").innerHTML = ("o won.");
+}
+}
+if (i == d && i == f && d == i && d == f && f == i && f == d && i != 0 && d != 0 && f != 0) {
+atx.moveTo(375,0);
+atx.lineTo(375,450);
+atx.stroke();
+if (i == 1) {
+document.getElementById("paka").innerHTML = ("x won.");
+}
+else if (i == -1) {
+document.getElementById("paka").innerHTML = ("o won.");
+}
+}
+if (a == h && a == d && h == a && h == d && f == a && d == h && a != 0 && d != 0 && h != 0) {
+atx.moveTo(0,225);
+atx.lineTo(450,225);
+atx.stroke();
+if (a == 1) {
+document.getElementById("paka").innerHTML = ("x won.");
+}
+else if (a == -1) {
+document.getElementById("paka").innerHTML = ("o won.");
+}
+}
+if (a == g && a == i && g == a && g == i && i == a && i == g && a != 0 && g != 0 && i != 0) {
+atx.moveTo(0,450);
+atx.lineTo(450,0);
+atx.stroke();
+if (a == 1) {
+document.getElementById("paka").innerHTML = ("x won.");
+}
+else if (a == -1) {
+document.getElementById("paka").innerHTML = ("o won.");
+}
+}
+if (a == c && a == b && c == a && c == b && b == a && b == c && a != 0 && c != 0 && b != 0) {
+atx.moveTo(225,450);
+atx.lineTo(225,0);
+atx.stroke();
+if (a == 1) {
+document.getElementById("paka").innerHTML = ("x won.");
+}
+else if (a == -1) {
+document.getElementById("paka").innerHTML = ("o won.");
+}
+}
+}
+
+function x5() {
+if (tern == 0) {
+if (a == 0) {
+atx.moveTo(250,250);
+atx.lineTo(200,200);
+
+atx.moveTo(250,200);
+atx.lineTo(200,250);
+atx.stroke();
+a = 1;
+tern = 1;
+}
+else {
+document.getElementById("paka").innerHTML = ("you can't do that");
+}
+}
+else {
+if (a == 0) {
+atx.beginPath();
+atx.arc(225,225,25, 0, 2 * Math.PI, false);
+atx.stroke();
+atx.closePath();
+a = -1;
+tern = 0;
+}
+else {
+document.getElementById("paka").innerHTML = ("you can't do that");
+}
+}
+if (e == h && e == g && h == g && h == e && g == h && g == e && e != 0 && g != 0 && h != 0) {
+atx.moveTo(75,0);
+atx.lineTo(75,450);
+atx.stroke();
+if (e == 1) {
+document.getElementById("paka").innerHTML = ("x won.");
+}
+else if (e == -1) {
+document.getElementById("paka").innerHTML = ("o won.");
+}
+}
+if (e == b && e == i && b == e && b == i && i == b && i == e && e != 0 && b != 0 && i != 0) {
+atx.moveTo(0,75);
+atx.lineTo(450,75);
+atx.stroke();
+if (e == 1) {
+document.getElementById("paka").innerHTML = ("x won.");
+}
+else if (e == -1) {
+document.getElementById("paka").innerHTML = ("o won.");
+}
+}
+if (e == a && e == f && a == e && a == f && f == a && f == e && e != 0 && a != 0 && f != 0) {
+atx.moveTo(0,0);
+atx.lineTo(450,450);
+atx.stroke();
+if (e == 1) {
+document.getElementById("paka").innerHTML = ("x won.");
+}
+else if (e == -1) {
+document.getElementById("paka").innerHTML = ("o won.");
+}
+}
+if (g == c && g == f && c == g && c == f && f == g && f == c && g != 0 && c != 0 && f != 0) {
+atx.moveTo(0,375);
+atx.lineTo(450,375);
+atx.stroke();
+if (g == 1) {
+document.getElementById("paka").innerHTML = ("x won.");
+}
+else if (g == -1) {
+document.getElementById("paka").innerHTML = ("o won.");
+}
+}
+if (i == d && i == f && d == i && d == f && f == i && f == d && i != 0 && d != 0 && f != 0) {
+atx.moveTo(375,0);
+atx.lineTo(375,450);
+atx.stroke();
+if (i == 1) {
+document.getElementById("paka").innerHTML = ("x won.");
+}
+else if (i == -1) {
+document.getElementById("paka").innerHTML = ("o won.");
+}
+}
+if (a == h && a == d && h == a && h == d && f == a && d == h && a != 0 && d != 0 && h != 0) {
+atx.moveTo(0,225);
+atx.lineTo(450,225);
+atx.stroke();
+if (a == 1) {
+document.getElementById("paka").innerHTML = ("x won.");
+}
+else if (a == -1) {
+document.getElementById("paka").innerHTML = ("o won.");
+}
+}
+if (a == g && a == i && g == a && g == i && i == a && i == g && a != 0 && g != 0 && i != 0) {
+atx.moveTo(0,450);
+atx.lineTo(450,0);
+atx.stroke();
+if (a == 1) {
+document.getElementById("paka").innerHTML = ("x won.");
+}
+else if (a == -1) {
+document.getElementById("paka").innerHTML = ("o won.");
+}
+}
+if (a == c && a == b && c == a && c == b && b == a && b == c && a != 0 && c != 0 && b != 0) {
+atx.moveTo(225,450);
+atx.lineTo(225,0);
+atx.stroke();
+if (a == 1) {
+document.getElementById("paka").innerHTML = ("x won.");
+}
+else if (a == -1) {
+document.getElementById("paka").innerHTML = ("o won.");
+}
+}
+}
+
+function x6() {
+if (tern == 0) {
+if (d == 0) {
+atx.moveTo(400,250);
+atx.lineTo(350,200);
+
+atx.moveTo(350,250);
+atx.lineTo(400,200);
+atx.stroke();
+d = 1;
+tern = 1;
+}
+else {
+document.getElementById("paka").innerHTML = ("you can't do that");
+}
+}
+else {
+if (d == 0) {
+atx.beginPath();
+atx.arc(375,225,25, 0, 2 * Math.PI, false);
+atx.stroke();
+atx.closePath();
+d = -1;
+tern = 0;
+}
+else {
+document.getElementById("paka").innerHTML = ("you can't do that");
+}
+}
+if (e == h && e == g && h == g && h == e && g == h && g == e && e != 0 && g != 0 && h != 0) {
+atx.moveTo(75,0);
+atx.lineTo(75,450);
+atx.stroke();
+if (e == 1) {
+document.getElementById("paka").innerHTML = ("x won.");
+}
+else if (e == -1) {
+document.getElementById("paka").innerHTML = ("o won.");
+}
+}
+if (e == b && e == i && b == e && b == i && i == b && i == e && e != 0 && b != 0 && i != 0) {
+atx.moveTo(0,75);
+atx.lineTo(450,75);
+atx.stroke();
+if (e == 1) {
+document.getElementById("paka").innerHTML = ("x won.");
+}
+else if (e == -1) {
+document.getElementById("paka").innerHTML = ("o won.");
+}
+}
+if (e == a && e == f && a == e && a == f && f == a && f == e && e != 0 && a != 0 && f != 0) {
+atx.moveTo(0,0);
+atx.lineTo(450,450);
+atx.stroke();
+if (e == 1) {
+document.getElementById("paka").innerHTML = ("x won.");
+}
+else if (e == -1) {
+document.getElementById("paka").innerHTML = ("o won.");
+}
+}
+if (g == c && g == f && c == g && c == f && f == g && f == c && g != 0 && c != 0 && f != 0) {
+atx.moveTo(0,375);
+atx.lineTo(450,375);
+atx.stroke();
+if (g == 1) {
+document.getElementById("paka").innerHTML = ("x won.");
+}
+else if (g == -1) {
+document.getElementById("paka").innerHTML = ("o won.");
+}
+}
+if (i == d && i == f && d == i && d == f && f == i && f == d && i != 0 && d != 0 && f != 0) {
+atx.moveTo(375,0);
+atx.lineTo(375,450);
+atx.stroke();
+if (i == 1) {
+document.getElementById("paka").innerHTML = ("x won.");
+}
+else if (i == -1) {
+document.getElementById("paka").innerHTML = ("o won.");
+}
+}
+if (a == h && a == d && h == a && h == d && f == a && d == h && a != 0 && d != 0 && h != 0) {
+atx.moveTo(0,225);
+atx.lineTo(450,225);
+atx.stroke();
+if (a == 1) {
+document.getElementById("paka").innerHTML = ("x won.");
+}
+else if (a == -1) {
+document.getElementById("paka").innerHTML = ("o won.");
+}
+}
+if (a == g && a == i && g == a && g == i && i == a && i == g && a != 0 && g != 0 && i != 0) {
+atx.moveTo(0,450);
+atx.lineTo(450,0);
+atx.stroke();
+if (a == 1) {
+document.getElementById("paka").innerHTML = ("x won.");
+}
+else if (a == -1) {
+document.getElementById("paka").innerHTML = ("o won.");
+}
+}
+if (a == c && a == b && c == a && c == b && b == a && b == c && a != 0 && c != 0 && b != 0) {
+atx.moveTo(225,450);
+atx.lineTo(225,0);
+atx.stroke();
+if (a == 1) {
+document.getElementById("paka").innerHTML = ("x won.");
+}
+else if (a == -1) {
+document.getElementById("paka").innerHTML = ("o won.");
+}
+}
+}
+
+function x7() {
+if (tern == 0){
+if (g == 0) {
+atx.moveTo(50,350);
+atx.lineTo(100,400);
+
+atx.moveTo(100,350);
+atx.lineTo(50,400);
+atx.stroke();
+g = 1;
+tern = 1;
+}
+else {
+document.getElementById("paka").innerHTML = ("you can't do that");
+}
+}
+else {
+if (g == 0){
+atx.beginPath();
+atx.arc(75,375,25, 0, 2 * Math.PI, false);
+atx.stroke();
+atx.closePath();
+g = -1;
+tern = 0;
+}
+else {
+document.getElementById("paka").innerHTML = ("you can't do that");
+}
+}
+if (e == h && e == g && h == g && h == e && g == h && g == e && e != 0 && g != 0 && h != 0) {
+atx.moveTo(75,0);
+atx.lineTo(75,450);
+atx.stroke();
+if (e == 1) {
+document.getElementById("paka").innerHTML = ("x won.");
+}
+else if (e == -1) {
+document.getElementById("paka").innerHTML = ("o won.");
+}
+}
+if (e == b && e == i && b == e && b == i && i == b && i == e && e != 0 && b != 0 && i != 0) {
+atx.moveTo(0,75);
+atx.lineTo(450,75);
+atx.stroke();
+if (e == 1) {
+document.getElementById("paka").innerHTML = ("x won.");
+}
+else if (e == -1) {
+document.getElementById("paka").innerHTML = ("o won.");
+}
+}
+if (e == a && e == f && a == e && a == f && f == a && f == e && e != 0 && a != 0 && f != 0) {
+atx.moveTo(0,0);
+atx.lineTo(450,450);
+atx.stroke();
+if (e == 1) {
+document.getElementById("paka").innerHTML = ("x won.");
+}
+else if (e == -1) {
+document.getElementById("paka").innerHTML = ("o won.");
+}
+}
+if (g == c && g == f && c == g && c == f && f == g && f == c && g != 0 && c != 0 && f != 0) {
+atx.moveTo(0,375);
+atx.lineTo(450,375);
+atx.stroke();
+if (g == 1) {
+document.getElementById("paka").innerHTML = ("x won.");
+}
+else if (g == -1) {
+document.getElementById("paka").innerHTML = ("o won.");
+}
+}
+if (i == d && i == f && d == i && d == f && f == i && f == d && i != 0 && d != 0 && f != 0) {
+atx.moveTo(375,0);
+atx.lineTo(375,450);
+atx.stroke();
+if (i == 1) {
+document.getElementById("paka").innerHTML = ("x won.");
+}
+else if (i == -1) {
+document.getElementById("paka").innerHTML = ("o won.");
+}
+}
+if (a == h && a == d && h == a && h == d && f == a && d == h && a != 0 && d != 0 && h != 0) {
+atx.moveTo(0,225);
+atx.lineTo(450,225);
+atx.stroke();
+if (a == 1) {
+document.getElementById("paka").innerHTML = ("x won.");
+}
+else if (a == -1) {
+document.getElementById("paka").innerHTML = ("o won.");
+}
+}
+if (a == g && a == i && g == a && g == i && i == a && i == g && a != 0 && g != 0 && i != 0) {
+atx.moveTo(0,450);
+atx.lineTo(450,0);
+atx.stroke();
+if (a == 1) {
+document.getElementById("paka").innerHTML = ("x won.");
+}
+else if (a == -1) {
+document.getElementById("paka").innerHTML = ("o won.");
+}
+}
+if (a == c && a == b && c == a && c == b && b == a && b == c && a != 0 && c != 0 && b != 0) {
+atx.moveTo(225,450);
+atx.lineTo(225,0);
+atx.stroke();
+if (a == 1) {
+document.getElementById("paka").innerHTML = ("x won.");
+}
+else if (a == -1) {
+document.getElementById("paka").innerHTML = ("o won.");
+}
+}
+}
+
+function x8() {
+if (tern == 0) {
+if (c == 0) {
+atx.moveTo(250,400);
+atx.lineTo(200,350);
+
+atx.moveTo(200,400);
+atx.lineTo(250,350);
+atx.stroke();
+c = 1;
+tern = 1;
+}
+else {
+document.getElementById("paka").innerHTML = ("you can't do that");
+}
+}
+else {
+if (c == 0) {
+atx.beginPath();
+atx.arc(225,375,25, 0, 2 * Math.PI, false);
+atx.stroke();
+atx.closePath();
+c = -1;
+tern = 0;
+}
+else {
+document.getElementById("paka").innerHTML = ("you can't do that");
+}
+}
+if (e == h && e == g && h == g && h == e && g == h && g == e && e != 0 && g != 0 && h != 0) {
+atx.moveTo(75,0);
+atx.lineTo(75,450);
+atx.stroke();
+if (e == 1) {
+document.getElementById("paka").innerHTML = ("x won.");
+}
+else if (e == -1) {
+document.getElementById("paka").innerHTML = ("o won.");
+}
+}
+if (e == b && e == i && b == e && b == i && i == b && i == e && e != 0 && b != 0 && i != 0) {
+atx.moveTo(0,75);
+atx.lineTo(450,75);
+atx.stroke();
+if (e == 1) {
+document.getElementById("paka").innerHTML = ("x won.");
+}
+else if (e == -1) {
+document.getElementById("paka").innerHTML = ("o won.");
+}
+}
+if (e == a && e == f && a == e && a == f && f == a && f == e && e != 0 && a != 0 && f != 0) {
+atx.moveTo(0,0);
+atx.lineTo(450,450);
+atx.stroke();
+if (e == 1) {
+document.getElementById("paka").innerHTML = ("x won.");
+}
+else if (e == -1) {
+document.getElementById("paka").innerHTML = ("o won.");
+}
+}
+if (g == c && g == f && c == g && c == f && f == g && f == c && g != 0 && c != 0 && f != 0) {
+atx.moveTo(0,375);
+atx.lineTo(450,375);
+atx.stroke();
+if (g == 1) {
+document.getElementById("paka").innerHTML = ("x won.");
+}
+else if (g == -1) {
+document.getElementById("paka").innerHTML = ("o won.");
+}
+}
+if (i == d && i == f && d == i && d == f && f == i && f == d && i != 0 && d != 0 && f != 0) {
+atx.moveTo(375,0);
+atx.lineTo(375,450);
+atx.stroke();
+if (i == 1) {
+document.getElementById("paka").innerHTML = ("x won.");
+}
+else if (i == -1) {
+document.getElementById("paka").innerHTML = ("o won.");
+}
+}
+if (a == h && a == d && h == a && h == d && f == a && d == h && a != 0 && d != 0 && h != 0) {
+atx.moveTo(0,225);
+atx.lineTo(450,225);
+atx.stroke();
+if (a == 1) {
+document.getElementById("paka").innerHTML = ("x won.");
+}
+else if (a == -1) {
+document.getElementById("paka").innerHTML = ("o won.");
+}
+}
+if (a == g && a == i && g == a && g == i && i == a && i == g && a != 0 && g != 0 && i != 0) {
+atx.moveTo(0,450);
+atx.lineTo(450,0);
+atx.stroke();
+if (a == 1) {
+document.getElementById("paka").innerHTML = ("x won.");
+}
+else if (a == -1) {
+document.getElementById("paka").innerHTML = ("o won.");
+}
+}
+if (a == c && a == b && c == a && c == b && b == a && b == c && a != 0 && c != 0 && b != 0) {
+atx.moveTo(225,450);
+atx.lineTo(225,0);
+atx.stroke();
+if (a == 1) {
+document.getElementById("paka").innerHTML = ("x won.");
+}
+else if (a == -1) {
+document.getElementById("paka").innerHTML = ("o won.");
+}
+}
+}
+
+
+function x9() {
+if (tern == 0){
+if (f == 0) {
+atx.moveTo(400,400);
+atx.lineTo(350,350);
+
+atx.moveTo(400,350);
+atx.lineTo(350,400);
+atx.stroke();
+f = 1;
+tern = 1;
+}
+else {
+document.getElementById("paka").innerHTML = ("you can't do that");
+}
+}
+else {
+if (f == 0) {
+atx.beginPath();
+atx.arc(375,375,25, 0, 2 * Math.PI, false);
+atx.stroke();
+atx.closePath();
+f = -1;
+tern = 0;
+}
+else {
+document.getElementById("paka").innerHTML = ("you can't do that");
+}
+}
+if (e == h && e == g && h == g && h == e && g == h && g == e && e != 0 && g != 0 && h != 0) {
+atx.moveTo(75,0);
+atx.lineTo(75,450);
+atx.stroke();
+if (e == 1) {
+document.getElementById("paka").innerHTML = ("x won.");
+}
+else if (e == -1) {
+document.getElementById("paka").innerHTML = ("o won.");
+}
+}
+if (e == b && e == i && b == e && b == i && i == b && i == e && e != 0 && b != 0 && i != 0) {
+atx.moveTo(0,75);
+atx.lineTo(450,75);
+atx.stroke();
+if (e == 1) {
+document.getElementById("paka").innerHTML = ("x won.");
+}
+else if (e == -1) {
+document.getElementById("paka").innerHTML = ("o won.");
+}
+}
+if (e == a && e == f && a == e && a == f && f == a && f == e && e != 0 && a != 0 && f != 0) {
+atx.moveTo(0,0);
+atx.lineTo(450,450);
+atx.stroke();
+if (e == 1) {
+document.getElementById("paka").innerHTML = ("x won.");
+}
+else if (e == -1) {
+document.getElementById("paka").innerHTML = ("o won.");
+}
+}
+if (g == c && g == f && c == g && c == f && f == g && f == c && g != 0 && c != 0 && f != 0) {
+atx.moveTo(0,375);
+atx.lineTo(450,375);
+atx.stroke();
+if (g == 1) {
+document.getElementById("paka").innerHTML = ("x won.");
+}
+else if (g == -1) {
+document.getElementById("paka").innerHTML = ("o won.");
+}
+}
+if (i == d && i == f && d == i && d == f && f == i && f == d && i != 0 && d != 0 && f != 0) {
+atx.moveTo(375,0);
+atx.lineTo(375,450);
+atx.stroke();
+if (i == 1) {
+document.getElementById("paka").innerHTML = ("x won.");
+}
+else if (i == -1) {
+document.getElementById("paka").innerHTML = ("o won.");
+}
+}
+if (a == h && a == d && h == a && h == d && f == a && d == h && a != 0 && d != 0 && h != 0) {
+atx.moveTo(0,225);
+atx.lineTo(450,225);
+atx.stroke();
+if (a == 1) {
+document.getElementById("paka").innerHTML = ("x won.");
+}
+else if (a == -1) {
+document.getElementById("paka").innerHTML = ("o won.");
+}
+}
+if (a == g && a == i && g == a && g == i && i == a && i == g && a != 0 && g != 0 && i != 0) {
+atx.moveTo(0,450);
+atx.lineTo(450,0);
+atx.stroke();
+if (a == 1) {
+document.getElementById("paka").innerHTML = ("x won.");
+}
+else if (a == -1) {
+document.getElementById("paka").innerHTML = ("o won.");
+}
+}
+if (a == c && a == b && c == a && c == b && b == a && b == c && a != 0 && c != 0 && b != 0) {
+atx.moveTo(225,450);
+atx.lineTo(225,0);
+atx.stroke();
+if (a == 1) {
+document.getElementById("paka").innerHTML = ("x won.");
+}
+else if (a == -1) {
+document.getElementById("paka").innerHTML = ("o won.");
+}
+}
+}
+</script>
+</html>

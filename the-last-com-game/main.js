@@ -3,6 +3,9 @@
 function GetButtons(amount, currentReality) {
     for (i = 1; i <= amount; i++) {
         var newReality = GetReality(currentReality, i);
+        if (newReality == '2212') {
+            newReality = "2212-alt";
+        }
         document.getElementById("buttonsArea").innerHTML += "<img onclick='EnterReality(\"" + newReality + "\");' src='assets/buttons/" + newReality + ".png' alt='" + newReality + "'>";
     }
 }

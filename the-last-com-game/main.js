@@ -39,7 +39,7 @@ function GetReality(currentReality, pathToNewReality) {
 function EnterReality(reality) {
     document.getElementById("videoArea").innerHTML = "<video id='gameVid' width='854' height='480' type='video/mp4' src='assets/videos/" + reality + ".mp4' autoplay muted></video>";
     document.getElementById("buttonsArea").innerHTML = "";
-    window.setTimeout(EnterRealityPart2, 1500, reality);
+    window.setTimeout(EnterRealityPart2, 1700, reality);
 }
 
 function EnterRealityPart2(reality) {

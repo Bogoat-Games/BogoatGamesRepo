@@ -4,7 +4,7 @@ function GetButtons(amount, currentReality) {
     for (i = 1; i <= amount; i++) {
         var newReality = GetReality(currentReality, i);
         var buttonName = newReality;
-        if (newReality == '2212') {
+        if (newReality == '2212' && currentReality == '2212') {
             buttonName = "2212-alt";
         }
         document.getElementById("buttonsArea").innerHTML += "<img onclick='EnterReality(\"" + newReality + "\");' src='assets/buttons/" + buttonName + ".png' alt='" + newReality + "'>";
@@ -39,7 +39,7 @@ function GetReality(currentReality, pathToNewReality) {
 function EnterReality(reality) {
     document.getElementById("videoArea").innerHTML = "<video id='gameVid' width='854' height='480' type='video/mp4' src='assets/videos/" + reality + ".mp4' autoplay muted></video>";
     document.getElementById("buttonsArea").innerHTML = "";
-    window.setTimeout(EnterRealityPart2, 1000, reality);
+    window.setTimeout(EnterRealityPart2, 1500, reality);
 }
 
 function EnterRealityPart2(reality) {

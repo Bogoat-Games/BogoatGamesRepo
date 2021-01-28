@@ -70,9 +70,9 @@ function SetupButtons(reality) {
         break;
         case '211211': winButton = true;
         break;
-        case '1': amount = 3;
+        case '1': amount = 2;
         break;
-        case '11': amount = 2;
+        case '11': amount = 3;
         break;
         case '111': backButton = true;
         break;

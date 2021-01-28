@@ -132,6 +132,15 @@ function SetupButtons(reality) {
         break;
         case '12122': winButton = true;
         break;
+        case '2223': backButton = true;
+        break;
+        case '2221': backButton = true;
+        break;
+        case '22223': backButton = true;
+        break;
+        case '22222': backButton = true;
+        break;
+        
     }
     if (winButton) {
         document.getElementById("buttonsArea").innerHTML = "<img onclick='EnterReality(\"0\");' src='assets/buttons/back.png' alt='backtostart'>";

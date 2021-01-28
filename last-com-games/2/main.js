@@ -19,8 +19,10 @@ function GetReality(currentReality, pathToNewReality) {
     switch (currentReality) {
         case '0': return pathToNewReality;
         case '21': return '211';
-        case '12131': return '1211';
-        case '12132': return '1212';
+        case '1213': if (pathToNewReality == '1') {
+            return '1211';
+        }
+        return '1212';
         case '21113': if (pathToNewReality == '2') {
           return '2112';  
         }

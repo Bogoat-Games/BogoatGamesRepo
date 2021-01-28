@@ -137,6 +137,7 @@ function SetupButtons(reality) {
         document.getElementById("buttonsArea").innerHTML = "<img onclick='EnterReality(\"0\");' src='assets/buttons/back.png' alt='backtostart'>";
         if (document.getElementById("gamerMode").disabled) {
             document.getElementById("gamerMode").disabled = false;
+            document.getElementById("gamerModeLockedText").innerHTML = "";
             alert("Congratulations!!!\nYou unlocked Gamer mode!\nIn Gamer mode, the game plays three times as fast.");
         }
     }
